@@ -85,12 +85,3 @@ def write_block(name, amount, to_whom):
 
 	with open(blockchain_dir + filename, 'w') as file:
 		dump(data, file, indent=4, ensure_ascii=False)
-
-
-def main():
-	#write_block("sfa", 13, "fwfwef")
-	print(check_integrity())
-
-
-if __name__ == '__main__':
-	main()
