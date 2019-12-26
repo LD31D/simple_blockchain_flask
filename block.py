@@ -3,6 +3,9 @@ from json import dump, load
 from os import curdir, listdir, path, mkdir
 
 
+blockchain_dir = curdir + '/blockchain/'
+
+
 def get_hash(path_to_file):
 	text = open(path_to_file, 'rb').read()
 
@@ -12,8 +15,6 @@ def get_hash(path_to_file):
 def check_integrity():
 
 	result = []
-
-	blockchain_dir = curdir + '/blockchain/'
 
 	if path.exists(blockchain_dir) == False:
 		mkdir(blockchain_dir)
@@ -53,8 +54,6 @@ def check_integrity():
 
 
 def write_block(name, amount, to_whom):
-
-	blockchain_dir = curdir + '/blockchain/'
 
 	if path.exists(blockchain_dir) == False:
 		mkdir(blockchain_dir)
