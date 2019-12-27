@@ -48,7 +48,7 @@ def check_integrity():
 		else:
 			res = "Corrapted"
 
-		result.append(res)
+		result.append("Block " + filename + res)
 		
 	return result
 
