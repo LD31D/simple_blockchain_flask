@@ -44,11 +44,16 @@ def check_integrity():
 		actual_hash = get_hash(blockchain_dir + str(prev_file))
 
 		if file_hash == actual_hash:
-			res = "Ok"
+			state = "Ok"
 		else:
-			res = "Corrapted"
+			state = "Corrapted"
 
-		result.append("Block " + filename + res)
+		result.append(
+						{
+							'name': "Block " + filename,
+							'state': state
+						}
+					)
 		
 	return result
 
